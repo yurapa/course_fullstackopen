@@ -1,6 +1,6 @@
-import Header from "./components/Header.jsx";
-import Content from "./components/Content.jsx";
-import Toral from "./components/Toral.jsx";
+import Header from "./components/Header";
+import Content from "./components/Content";
+import Total from "./components/Total";
 
 const App = () => {
     const course = {
@@ -25,7 +25,7 @@ const App = () => {
         <div>
             <Header course={course.name} />
             <Content parts={course.parts} />
-            <Toral parts={course.parts} />
+            <Total parts={course.parts} />
         </div>
     )
 }
