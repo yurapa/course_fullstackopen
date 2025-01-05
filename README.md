@@ -7,6 +7,8 @@ Learn React, Redux, Node.js, MongoDB, GraphQL and TypeScript in one go! This cou
 
 Full Stack open: [fullstackopen.com](https://fullstackopen.com/en/)
 
+Submissions: [studies.cs.helsinki.fi](https://studies.cs.helsinki.fi/stats/courses/fullstackopen/submissions)
+
 <details>
 
 <summary>Part 0 - Fundamentals of Web apps</summary>
@@ -27,6 +29,21 @@ Example [App](dies.cs.helsinki.fi/exampleapp) and the  [source code](https://git
 ```
 
 </details>
+
+
+
+<details>
+
+<summary>Part 1 - React</summary>
+
+```console
+    npm create vite@latest introdemo -- --template react
+```
+ - [JS](https://fullstackopen.com/en/part1/java_script)
+ - (Mutable or unmutable add into array: .concat vs .push) Adding the new item to the array is accomplished with the concat method, which does not mutate the existing array but rather returns a new copy of the array with the item added to it. As mentioned previously, it's also possible in JavaScript to add items to an array with the push method.
+ - A State update in React happens [asynchronously](https://react.dev/learn/queueing-a-series-of-state-updates), i.e. not immediately but "at some point" before the component is rendered again.
+</details>
+
 
 <details>
 
@@ -70,3 +87,4 @@ notes/10	PATCH	replaces a part of the identified resource with the request data
 |notes/10	|PATCH	|replaces a part of the identified resource with the request data|
 
 </details>
+
