@@ -10,10 +10,9 @@ Full Stack open: [fullstackopen.com](https://fullstackopen.com/en/)
 Submissions: [studies.cs.helsinki.fi](https://studies.cs.helsinki.fi/stats/courses/fullstackopen/submissions)
 
 <details>
-
 <summary>Part 0 - Fundamentals of Web apps</summary>
 
-Example [App](dies.cs.helsinki.fi/exampleapp) and the  [source code](https://github.com/mluukkai/example_app/)
+Example [App](https://studies.cs.helsinki.fi/exampleapp/) and the  [source code](https://github.com/mluukkai/example_app/)
 
 ### Building diagrams for client-server interaction
 
@@ -21,19 +20,14 @@ Example [App](dies.cs.helsinki.fi/exampleapp) and the  [source code](https://git
 
  - GitHub Docs, Creating diagrams: https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#about-creating-diagrams
 
-
 ### Version of Mermaid:
 
 ```mermaid
   info
 ```
-
 </details>
 
-
-
 <details>
-
 <summary>Part 1 - React</summary>
 
 ```console
