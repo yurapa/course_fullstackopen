@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const anecdotes = [
     'If it hurts, do it more often.',
@@ -14,28 +14,19 @@ const anecdotes = [
 const App = () => {
     const [points, setPoints] = useState(Array(anecdotes.length).fill(0));
     const [selected, setSelected] = useState(0);
-    const [best, setBest] = useState(null);
-    const [isFirstRender, setIsFirstRender] = useState(true);
+    const [best, setBest] = useState(-1);
 
     const handleChange = () => {
         setSelected(Math.floor(Math.random() * anecdotes.length));
     };
 
     const handleVote = () => {
-        setPoints([...points].map((point, index) => (index === selected ? point + 1 : point)));
+        const updatedPoints = [...points];
+
+        updatedPoints[selected] += 1;
+        setPoints(updatedPoints);
+        setBest(updatedPoints.indexOf(Math.max(...updatedPoints)));
     };
-
-    useEffect(() => {
-        const bestIndex = points.indexOf(Math.max(...points));
-        setBest(bestIndex);
-
-        // After the first render, set isFirstRender to false
-        if (isFirstRender) {
-            setIsFirstRender(false);
-        }
-
-        console.log('useEffect')
-    }, [points]);
 
     return (
         <div>
@@ -45,7 +36,7 @@ const App = () => {
             <br />
             <button onClick={handleVote}>vote</button>
             <button onClick={handleChange}>Next anecdote</button>
-            { !isFirstRender && best !== null &&  (
+            { best >= 0 &&  (
                 <div>
                     <h2>Anecdote with most votes:</h2>
                     <p>{anecdotes[best]}</p>
